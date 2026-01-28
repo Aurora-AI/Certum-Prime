@@ -2,6 +2,14 @@
 
 Este documento descreve como configurar o deploy automático do Certum Prime para Google Cloud Run usando GitHub Actions.
 
+## 📚 Documentação Relacionada
+
+- **[Quick Start - Configuração Rápida](QUICKSTART-SECRETS.md)** - Guia rápido de 3 minutos
+- **[Checklist de Deploy](DEPLOYMENT-CHECKLIST.md)** - Checklist completo passo a passo
+- **Este documento** - Documentação técnica detalhada
+
+---
+
 ## 📋 Visão Geral
 
 O workflow de deploy automático foi configurado no arquivo `.github/workflows/deploy-cloud-run.yml` e será executado automaticamente sempre que houver um push para a branch `main`.
