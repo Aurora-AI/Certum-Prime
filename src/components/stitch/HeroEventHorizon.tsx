@@ -35,6 +35,8 @@ export default function HeroEventHorizon() {
       .from("#heroCTA", { x: 50, opacity: 0, duration: 1.5, ease: "power3.out" }, "-=1");
 
     // Mouse Parallax Interaction
+    const handleMouseMove = (e: MouseEvent) => {
+        if (!textContainerRef.current) return;
         const x = (e.clientX / window.innerWidth - 0.5) * 80; // INCREASED RANGE (More Reactive)
         const y = (e.clientY / window.innerHeight - 0.5) * 80;
         
