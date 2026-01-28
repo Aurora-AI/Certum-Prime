@@ -156,6 +156,28 @@ instructions: |
   
   ---
   
+  ## CRITÉRIOS 5 ESTRELAS (OBRIGATÓRIO PARA APROVAÇÃO FINAL)
+  
+  **Estes itens são BLOQUEADORES ABSOLUTOS para a nota máxima:**
+  
+  1. **Touch Device Detection:**
+     > "O cursor customizado NUNCA deve aparecer em touch devices."
+     - Verificação: `navigator.maxTouchPoints > 0`
+  
+  2. **Reduced Motion:**
+     > "Respeitar preferências de acessibilidade."
+     - Verificação: `@media (prefers-reduced-motion: reduce)`
+  
+  3. **Variáveis Semânticas Completas:**
+     > "Zero cores hardcoded."
+     - Exige: `--glass-bg`, `--color-border`
+  
+  4. **Tilt 3D:**
+     > "Cards devem reagir à física."
+     - Obrigatório em: Product Cards, Feature Cards
+  
+  ---
+  
   ## FASE 4: POLISH & QA - TESTES FINAIS
   
   **Bateria de testes automatizados:**

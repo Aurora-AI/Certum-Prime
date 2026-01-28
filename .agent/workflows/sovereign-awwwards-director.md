@@ -25,3 +25,8 @@ Key Checklist:
 - [ ] **Primitives:** Cursor, Preloader, Magnetic Buttons
 - [ ] **Performance:** 60fps+ on Production
 - [ ] **Mobile:** Responsive & Touch-Optimized
+
+## 5. 5-Star Certification (Gate 5)
+// turbo
+@sovereign-workflow-director CHECK-GATE GATE_5_MOBILE_PERFECTION --criteria="touch-detection,reduced-motion,tilt-3d"
+

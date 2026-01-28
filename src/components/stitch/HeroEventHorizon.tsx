@@ -30,9 +30,9 @@ export default function HeroEventHorizon() {
 
     // Initial Entrance
     const tl = gsap.timeline();
-    tl.from(contentRef.current, { scale: 1.1, opacity: 0, duration: 2.5, ease: "power4.out" })
-      .from(ringsRef.current, { scale: 0.5, opacity: 0, duration: 2.5, ease: "power3.out" }, "-=2")
-      .from("#heroCTA", { x: 50, opacity: 0, duration: 1.5, ease: "power3.out" }, "-=1");
+    tl.from(contentRef.current, { scale: 1.1, opacity: 0, duration: 1.8, ease: "power4.out" })
+      .from(ringsRef.current, { scale: 0.5, opacity: 0, duration: 1.8, ease: "power3.out" }, "-=1.5")
+      .from("#heroCTA", { x: 50, opacity: 0, duration: 1.2, ease: "power3.out" }, "-=0.8");
 
     // Mouse Parallax Interaction
     const handleMouseMove = (e: MouseEvent) => {
@@ -84,7 +84,7 @@ export default function HeroEventHorizon() {
 
         if (heroLayerRef.current) {
           // GRADIENT MODIFICATION: Blend circular hole with bottom fade
-          const mask = `radial-gradient(circle at 50% 50%, transparent ${holeSize}%, black ${edgeEnd}%), linear-gradient(to bottom, black 80%, transparent 100%)`; 
+          const mask = `radial-gradient(circle at 50% 50%, transparent ${holeSize}%, black ${edgeEnd}%)`; 
           heroLayerRef.current.style.maskImage = mask;
           heroLayerRef.current.style.webkitMaskImage = mask;
           heroLayerRef.current.style.pointerEvents = progress > 0.8 ? "none" : "auto";
@@ -149,7 +149,7 @@ export default function HeroEventHorizon() {
       {/* The Fixed Sovereign Layer */}
       <div 
         ref={heroLayerRef}
-        className="fixed inset-0 z-[100] w-full h-full bg-void overflow-hidden pointer-events-auto"
+        className="fixed inset-0 z-[100] w-full h-full bg-void overflow-hidden pointer-events-auto will-change-transform"
         style={{ 
           maskImage: 'radial-gradient(circle at 50% 50%, transparent 0%, black 0%)', // Center Hole
           WebkitMaskImage: 'radial-gradient(circle at 50% 50%, transparent 0%, black 0%)'

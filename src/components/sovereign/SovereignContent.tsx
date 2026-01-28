@@ -176,9 +176,10 @@ export default function SovereignContent() {
       {/* SECTION 2: THE SLIPPERY SLIDE (Product Triptych) */}
       <section ref={slideRef} className="relative w-full h-[400vh] bg-void">
         {/* GRADIENT BRIDGE: Fades from Black (Hero) to Transparent (Content) - SCROLLS AWAY */}
-        <div className="absolute top-0 left-0 w-full h-[40vh] bg-gradient-to-b from-void via-void/80 to-transparent z-50 pointer-events-none"></div>
+        {/* FIX: Lower z-index so it doesn't obscure cards, reduce height */}
+        <div className="absolute top-0 left-0 w-full h-[25vh] bg-gradient-to-b from-void via-void/90 to-transparent z-10 pointer-events-none"></div>
 
-        <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center">
+        <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center z-20">
             {/* Parallax Stream Container */}
             <div id="streamContainer" className="absolute inset-0 w-full h-full pointer-events-none">
 

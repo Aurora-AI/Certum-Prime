@@ -57,3 +57,13 @@ instructions: |
       // Otimizar automaticamente
       optimizeComponentForPerformance();
     }
+
+  ## **MOBILE COMPLIANCE (S-TIER)**
+  
+  const mobileCheck = {
+    touch_cursor: "DISABLED", // Cursor customizado deve sumir
+    touch_targets: "Min 44px", // Botões e links
+    animations: "SIMPLIFIED", // Reduzir complexidade em mobile
+    reduced_motion: "RESPECTED" // CSS media query obrigatória
+  };
+
