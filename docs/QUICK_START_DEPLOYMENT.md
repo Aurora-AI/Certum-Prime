@@ -144,8 +144,8 @@ docker build -t test .
 
 ## 📚 Próximos Passos
 
-- **Configurar domínio customizado**: [Guia Completo](CLOUD_RUN_DEPLOYMENT.md#configurar-domínio)
-- **Adicionar variáveis de ambiente**: [Guia Completo](CLOUD_RUN_DEPLOYMENT.md#variáveis-de-ambiente)
+- **Configurar domínio customizado**: [Guia Completo](CLOUD_RUN_DEPLOYMENT.md)
+- **Adicionar variáveis de ambiente**: [Guia Completo](CLOUD_RUN_DEPLOYMENT.md#customização)
 - **Aumentar recursos**: [Guia Completo](CLOUD_RUN_DEPLOYMENT.md#customização)
 - **Configurar CI/CD avançado**: [Guia Completo](CLOUD_RUN_DEPLOYMENT.md)
 
