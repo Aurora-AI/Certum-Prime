@@ -7,6 +7,8 @@
 [![Version](https://img.shields.io/badge/Version-3.0-blue)]()
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-green)]()
 
+> **⚠️ Configuração de Deploy**: Para habilitar o deploy automático no Google Cloud Run, [configure os secrets necessários](docs/DEPLOYMENT.md#%EF%B8%8F-configura%C3%A7%C3%A3o-necess%C3%A1ria) no repositório.
+
 ---
 
 ## 🚀 Visão Geral
@@ -406,6 +408,7 @@ efeitos: "Text Reveals, Clean, Minimal"
 - [Q&A Manual Completo](https://github.com/Aurora-AI/Certum-Prime/blob/main/docs/SOVEREIGN%20WORKFLOW%20Q%26A%20MANUAL%20v1.0.md)
 - [Pipeline Autônomo](.agent/workflows/AUTONOMOUS-PIPELINE.md)
 - [Catálogo de Recursos](.agent/CATALOG.md)
+- [Deploy Automático - Cloud Run](docs/DEPLOYMENT.md)
 
 ---
 
