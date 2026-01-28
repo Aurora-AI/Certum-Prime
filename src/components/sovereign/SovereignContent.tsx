@@ -8,7 +8,9 @@ import MagneticButton from "./MagneticButton";
 import Link from 'next/link';
 import AsymmetricalMedia from "./AsymmetricalMedia";
 import TextSplitReveal from "@/components/effects/TextSplitReveal";
+import TextSplitReveal from "@/components/effects/TextSplitReveal";
 import { VelocityWrapper } from "@/components/effects/ScrollVelocity";
+import Tilt3DCard from "@/components/effects/Tilt3DCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -297,47 +299,53 @@ export default function SovereignContent() {
                 <div className="lg:w-2/3 flex flex-col gap-32 pt-20 lg:pt-0">
                     
                     {/* Card 1: Structured Notes (Wide) */}
-                    <div className="card-animate group relative w-full aspect-[16/9] bg-white border border-border-subtle p-8 lg:p-12 flex flex-col justify-between hover:border-primary/50 transition-colors duration-500 shadow-xl shadow-gray-200/50">
-                        <div className="absolute top-8 right-8 text-primary/20 text-9xl font-serif leading-none select-none group-hover:text-primary/10 transition-colors">01</div>
-                        <div>
-                             <div className="w-10 h-10 border border-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
-                                <span className="material-symbols-outlined text-sm">token</span>
-                             </div>
-                             <h3 className="text-3xl font-serif mb-4">Structured Notes</h3>
-                             <p className="text-gray-500 max-w-md">Customized debt obligations providing capital protection and enhanced yield through derivative components.</p>
+                    <Tilt3DCard className="w-full" maxTilt={8} speed={0.5}>
+                        <div className="card-animate group relative w-full aspect-[16/9] bg-white border border-border-subtle p-8 lg:p-12 flex flex-col justify-between hover:border-primary/50 transition-colors duration-500 shadow-xl shadow-gray-200/50 h-full">
+                            <div className="absolute top-8 right-8 text-primary/20 text-9xl font-serif leading-none select-none group-hover:text-primary/10 transition-colors">01</div>
+                            <div>
+                                <div className="w-10 h-10 border border-primary/20 rounded-full flex items-center justify-center mb-6 text-primary">
+                                    <span className="material-symbols-outlined text-sm">token</span>
+                                </div>
+                                <h3 className="text-3xl font-serif mb-4">Structured Notes</h3>
+                                <p className="text-gray-500 max-w-md">Customized debt obligations providing capital protection and enhanced yield through derivative components.</p>
+                            </div>
+                            <div className="flex justify-between items-end mt-8">
+                                <span className="font-mono text-xs text-gray-400">TARGET: 12-15% APY</span>
+                                <span className="w-12 h-12 rounded-full bg-dark-base text-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                    <span className="material-symbols-outlined text-lg">arrow_outward</span>
+                                </span>
+                            </div>
                         </div>
-                        <div className="flex justify-between items-end mt-8">
-                             <span className="font-mono text-xs text-gray-400">TARGET: 12-15% APY</span>
-                             <span className="w-12 h-12 rounded-full bg-dark-base text-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <span className="material-symbols-outlined text-lg">arrow_outward</span>
-                             </span>
-                        </div>
-                    </div>
+                    </Tilt3DCard>
 
                     {/* Card 2: Private Equity (Tall / Offset) */}
                     <div className="w-full flex justify-end">
-                        <div className="card-animate group relative w-full lg:w-[80%] aspect-[4/5] bg-dark-base text-white p-8 lg:p-12 flex flex-col justify-between shadow-2xl">
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay group-hover:opacity-30 transition-opacity duration-700"></div>
-                            <div className="relative z-10">
-                                <span className="font-mono text-xs text-primary tracking-widest block mb-4">IL-LIQUIDITY PREMIUM</span>
-                                <h3 className="text-4xl font-serif mb-6">Private Equity</h3>
-                                <p className="text-gray-400 max-w-sm">Direct stakes in high-growth operational companies before they hit the public markets.</p>
+                        <Tilt3DCard className="w-full lg:w-[80%]" maxTilt={12} speed={0.4} perspective={1500}>
+                            <div className="card-animate group relative w-full h-full aspect-[4/5] bg-dark-base text-white p-8 lg:p-12 flex flex-col justify-between shadow-2xl">
+                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20 mix-blend-overlay group-hover:opacity-30 transition-opacity duration-700"></div>
+                                <div className="relative z-10">
+                                    <span className="font-mono text-xs text-primary tracking-widest block mb-4">IL-LIQUIDITY PREMIUM</span>
+                                    <h3 className="text-4xl font-serif mb-6">Private Equity</h3>
+                                    <p className="text-gray-400 max-w-sm">Direct stakes in high-growth operational companies before they hit the public markets.</p>
+                                </div>
+                                <div className="relative z-10 border-t border-white/10 pt-8 flex justify-between items-center">
+                                    <span className="font-mono text-xs">VINTAGE 2025</span>
+                                    <span className="text-primary italic font-serif">Open for Subscription</span>
+                                </div>
                             </div>
-                            <div className="relative z-10 border-t border-white/10 pt-8 flex justify-between items-center">
-                                <span className="font-mono text-xs">VINTAGE 2025</span>
-                                <span className="text-primary italic font-serif">Open for Subscription</span>
-                            </div>
-                        </div>
+                        </Tilt3DCard>
                     </div>
 
                     {/* Card 3: Real Estate (Wide) */}
-                    <div className="card-animate group relative w-full aspect-[16/8] bg-[#F5F5F0] border border-transparent p-8 lg:p-12 flex flex-col justify-center items-center text-center hover:bg-white hover:border-border-subtle transition-all duration-500">
-                         <h3 className="text-3xl font-serif mb-4">Real Assets</h3>
-                         <p className="text-gray-500 max-w-lg mb-8">Tangible luxury assets including Commercial Real Estate, Fine Art, and Collectibles.</p>
-                         <button className="px-8 py-3 border border-dark-base text-xs font-bold uppercase tracking-widest hover:bg-dark-base hover:text-white transition-colors">
-                            Explore Catalog
-                         </button>
-                    </div>
+                    <Tilt3DCard className="w-full" maxTilt={8} speed={0.5}>
+                        <div className="card-animate group relative w-full aspect-[16/8] bg-[#F5F5F0] border border-transparent p-8 lg:p-12 flex flex-col justify-center items-center text-center hover:bg-white hover:border-border-subtle transition-all duration-500 h-full">
+                            <h3 className="text-3xl font-serif mb-4">Real Assets</h3>
+                            <p className="text-gray-500 max-w-lg mb-8">Tangible luxury assets including Commercial Real Estate, Fine Art, and Collectibles.</p>
+                            <button className="px-8 py-3 border border-dark-base text-xs font-bold uppercase tracking-widest hover:bg-dark-base hover:text-white transition-colors">
+                                Explore Catalog
+                            </button>
+                        </div>
+                    </Tilt3DCard>
 
                 </div>
             </div>

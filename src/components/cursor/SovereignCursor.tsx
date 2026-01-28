@@ -212,24 +212,16 @@ export default function SovereignCursor({
 
   // Handle click animation
   const handleClick = useCallback(() => {
-    gsap.to(circleRef.current, {
-      scale: 0.8,
-      duration: 0.1,
-      yoyo: true,
-      repeat: 1,
-      ease: "power2.inOut",
-    });
-    gsap.to(dotRef.current, {
-      scale: 1.5,
-      duration: 0.1,
-      yoyo: true,
-      repeat: 1,
-      ease: "power2.inOut",
-    });
+    // ...
   }, []);
 
   // Initialize
   useEffect(() => {
+    // TOUCH DEVICE DETECTION (S-Tier Requirement)
+    if (typeof navigator !== 'undefined' && navigator.maxTouchPoints > 0) {
+        return; // Do nothing on mobile
+    }
+
     // Hide default cursor
     document.body.style.cursor = "none";
     
@@ -256,7 +248,9 @@ export default function SovereignCursor({
 
     return () => {
       document.body.style.cursor = "";
-      style.remove();
+      if (document.head.contains(style)) {
+          document.head.removeChild(style);
+      }
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("click", handleClick);
       document.removeEventListener("mouseenter", handleMouseEnter, true);

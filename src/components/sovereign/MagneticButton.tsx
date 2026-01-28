@@ -52,6 +52,7 @@ export default function MagneticButton({ children, className = "", ...props }: M
     <button
       ref={buttonRef}
       className={`relative inline-flex items-center justify-center transition-transform ${className}`}
+      data-cursor={props['data-cursor'] || "magnetic"}
       {...props}
     >
       {children}
