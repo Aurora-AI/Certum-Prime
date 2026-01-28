@@ -1,6 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
   --color-primary: #d4af35;
   --color-dark-base: #050505;
   --color-light-base: #FFFFFF;
@@ -17,9 +19,9 @@
   --color-platinum-dim: #999999;
   --color-obsidian: #000000;
   
-  --font-sans: var(--font-space-grotesk);
+  --font-sans: var(--font-space);
   --font-serif: var(--font-playfair);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-mono: var(--font-mono);
   
   --font-size-hero: clamp(3rem, 5vw, 6rem);
   --font-size-xl: clamp(1.5rem, 3vw, 3rem);
