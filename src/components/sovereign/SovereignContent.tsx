@@ -5,9 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MagneticButton from "./MagneticButton";
-import Link from 'next/link';
 import AsymmetricalMedia from "./AsymmetricalMedia";
-import TextSplitReveal from "@/components/effects/TextSplitReveal";
 import TextSplitReveal from "@/components/effects/TextSplitReveal";
 import { VelocityWrapper } from "@/components/effects/ScrollVelocity";
 import Tilt3DCard from "@/components/effects/Tilt3DCard";
@@ -481,7 +479,7 @@ export default function SovereignContent() {
                         </div>
                         <span className="text-gray-400 text-xs font-mono uppercase">Operational</span>
                     </div>
-                    <Link className="text-primary text-sm hover:text-white transition-colors" href="/dashboard">Secure Login →</Link>
+                    <a className="text-primary text-sm hover:text-white transition-colors" href="/dashboard">Secure Login →</a>
                 </div>
             </div>
             <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">

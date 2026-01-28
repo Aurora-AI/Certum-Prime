@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import gsap from "gsap";
-import Link from "next/link";
 
 interface MenuItem {
   label: string;
@@ -330,7 +329,7 @@ export default function SpiralVortexMenu({
               setTimeout(closeMenu, 400);
             }}
           >
-            <Link href={item.href} className="block text-center">
+            <a href={item.href} className="block text-center">
               <div className={`relative px-8 py-6 transition-all duration-300 ${
                 activeIndex === index 
                   ? 'bg-primary/10 border-primary/50' 
@@ -353,7 +352,7 @@ export default function SpiralVortexMenu({
                   </span>
                 )}
               </div>
-            </Link>
+            </a>
           </div>
         ))}
       </div>

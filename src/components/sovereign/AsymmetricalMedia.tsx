@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,11 +120,10 @@ export default function AsymmetricalMedia({
 
                 {/* Image Layer (Top) */}
                 <div ref={imageRef} className="absolute inset-0 z-10 w-full h-full">
-                     <Image 
+                     <img 
                         src={imageSrc} 
                         alt="Sovereign Visual" 
-                        fill 
-                        className="object-cover"
+                        className="w-full h-full object-cover"
                     />
                 </div>
 

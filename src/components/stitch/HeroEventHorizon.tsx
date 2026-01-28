@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MagneticButton from "@/components/sovereign/MagneticButton";
-import Link from "next/link";
 import SovereignStarfield from "@/components/sovereign/SovereignStarfield";
 import { useScrambleText } from "@/hooks/useScrambleText";
 import TextSplitReveal from "@/components/effects/TextSplitReveal";
@@ -206,11 +205,11 @@ export default function HeroEventHorizon() {
                 </h2>
 
                 <div id="heroCTA" className="mt-12 pl-0 md:pl-12 border-l-0 md:border-l border-primary/30">
-                  <Link href="/dashboard">
+                  <a href="/dashboard">
                       <MagneticButton className="px-16 py-6 bg-primary text-black font-sans font-bold text-sm tracking-[0.25em] uppercase hover:bg-white transition-colors duration-500 shadow-[0_0_40px_rgba(212,175,53,0.4)]">
                           Enter The Vault
                       </MagneticButton>
-                  </Link>
+                  </a>
                 </div>
             </div>
             
