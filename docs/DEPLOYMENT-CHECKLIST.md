@@ -274,4 +274,4 @@ Se algo der errado, consulte:
 
 **Status**: ⬜ Não iniciado | 🔄 Em progresso | ✅ Completo
 
-**Última atualização**: {{ data }}
+**Última atualização**: Janeiro 2026
