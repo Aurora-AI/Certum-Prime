@@ -400,12 +400,29 @@ efeitos: "Text Reveals, Clean, Minimal"
 
 ---
 
+## 🚀 Deployment
+
+Este projeto está configurado com deploy automático para **Google Cloud Run**.
+
+### Configuração Rápida
+
+1. Acesse as configurações de secrets: [GitHub Secrets](https://github.com/Aurora-AI/Certum-Prime/settings/secrets/actions)
+2. Adicione dois secrets:
+   - `GCP_PROJECT_ID` - ID do seu projeto GCP
+   - `GCP_SA_KEY` - JSON da Service Account com permissões de Cloud Run
+3. Faça push para `main` ou execute manualmente via Actions
+
+📖 **[Guia Completo de Deploy](docs/CLOUD_RUN_DEPLOYMENT.md)** - Instruções detalhadas de configuração
+
+---
+
 ## 📚 Documentação
 
 - [Guia Completo de Instalação](.agent/install/README.md)
 - [Q&A Manual Completo](https://github.com/Aurora-AI/Certum-Prime/blob/main/docs/SOVEREIGN%20WORKFLOW%20Q%26A%20MANUAL%20v1.0.md)
 - [Pipeline Autônomo](.agent/workflows/AUTONOMOUS-PIPELINE.md)
 - [Catálogo de Recursos](.agent/CATALOG.md)
+- [Deploy para Cloud Run](docs/CLOUD_RUN_DEPLOYMENT.md)
 
 ---
 
