@@ -178,6 +178,9 @@ export default function SovereignContent() {
         <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center">
             {/* Parallax Stream Container */}
             <div id="streamContainer" className="absolute inset-0 w-full h-full pointer-events-none">
+                {/* GRADIENT BRIDGE: Fades from Black (Hero) to Transparent (Content) */}
+                <div className="absolute top-0 left-0 w-full h-[30vh] bg-gradient-to-b from-void via-void/50 to-transparent z-50 pointer-events-none"></div>
+
                 {/* Card 1: Gold Bullion (Left, Slow) */}
                 <div className="stream-card absolute top-[20%] left-[10%] w-64 h-40 bg-gradient-to-br from-[#FEDC77] via-[#D4AF37] to-[#8a7122] rounded-sm shadow-2xl opacity-80 transform rotate-[-12deg] z-10 border border-white/20">
                     <div className="absolute inset-0 flex items-center justify-center">

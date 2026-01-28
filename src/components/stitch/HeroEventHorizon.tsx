@@ -35,23 +35,21 @@ export default function HeroEventHorizon() {
       .from("#heroCTA", { x: 50, opacity: 0, duration: 1.5, ease: "power3.out" }, "-=1");
 
     // Mouse Parallax Interaction
-    const handleMouseMove = (e: MouseEvent) => {
-        if (!textContainerRef.current) return;
-        const x = (e.clientX / window.innerWidth - 0.5) * 40; // Increased range
-        const y = (e.clientY / window.innerHeight - 0.5) * 40;
+        const x = (e.clientX / window.innerWidth - 0.5) * 80; // INCREASED RANGE (More Reactive)
+        const y = (e.clientY / window.innerHeight - 0.5) * 80;
         
         gsap.to(textContainerRef.current, {
             x: x,
             y: y,
-            duration: 1,
+            duration: 1.2,
             ease: "power2.out"
         });
         
         if (ringsRef.current) {
              gsap.to(ringsRef.current, {
-                x: x * -0.2, // Rings move opposite
-                y: y * -0.2,
-                duration: 1.5,
+                x: x * -0.5, // Stronger contrary motion
+                y: y * -0.5,
+                duration: 1.8,
                 ease: "power2.out"
             });
         }
@@ -59,7 +57,7 @@ export default function HeroEventHorizon() {
     
     window.addEventListener('mousemove', handleMouseMove);
 
-    // SPIRAL CONFIGURATION
+    // SPIRAL CONFIGURATION (Rest of existing code)
     const SPIRAL_CONFIG = {
         maxRotation: 180,
         minScale: 0.5,
@@ -83,11 +81,15 @@ export default function HeroEventHorizon() {
         const edgeEnd = holeSize + (5 + progress * 10); 
 
         if (heroLayerRef.current) {
-          const mask = `radial-gradient(circle at 50% 50%, transparent ${holeSize}%, black ${edgeEnd}%)`; // Center Hole
+          // GRADIENT MODIFICATION: Blend circular hole with bottom fade
+          const mask = `radial-gradient(circle at 50% 50%, transparent ${holeSize}%, black ${edgeEnd}%), linear-gradient(to bottom, black 80%, transparent 100%)`; 
           heroLayerRef.current.style.maskImage = mask;
           heroLayerRef.current.style.webkitMaskImage = mask;
           heroLayerRef.current.style.pointerEvents = progress > 0.8 ? "none" : "auto";
         }
+
+        // ... rest of update logic
+
 
         // 2. Spiral Vortex Transformation (New)
         if (contentRef.current) {
